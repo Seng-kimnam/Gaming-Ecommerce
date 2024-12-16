@@ -1,0 +1,195 @@
+ :root {
+            --primary-color: #d88d1d;
+            --secondary-color: #343434;
+            --text-color: #ffffff;
+            --card-background: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--primary-color);
+            line-height: 1.6;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Responsive Header */
+        .big-text {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 1rem;
+            font-size: clamp(1.5rem, 5vw, 3rem);
+        }
+
+        /* Responsive Navigation */
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            margin: 0.25rem;
+            background-color: transparent;
+            border: 2px solid var(--secondary-color);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover, .btn.active {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        /* Responsive Product Grid */
+        .table-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        .gallery {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery img {
+            max-width: 100px;
+            max-height: 100px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+
+        .desc {
+            text-align: center;
+            width: 100%;
+        }
+
+        .buttonBuy {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttonBuy:hover {
+            background-color: var(--primary-color);
+        }
+
+        .buttonDetail {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        /* Responsive Profile and Cart */
+        .profile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: rgba(0,0,0,0.1);
+        }
+
+        #cart {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        #cart img {
+            width: 30px;
+            height: 30px;
+            margin-left: 0.5rem;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: var(--card-background);
+            margin: 10% auto;
+            padding: 1rem;
+            border-radius: 10px;
+            max-width: 90%;
+            width: 500px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 600px) {
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 80%;
+            }
+
+            .table-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 1rem;
+            text-align: center;
+        }
+        .footer { display: flex; justify-content: space-evenly; background-color: #343434; }
